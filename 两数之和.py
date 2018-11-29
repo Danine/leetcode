@@ -5,6 +5,7 @@
 给定 nums = [2, 7, 11, 15], target = 9
 因为 nums[0] + nums[1] = 2 + 7 = 9
 所以返回 [0, 1]
+idea:set()是一个无序的不重复元素序列，类似于字典，不用遍历直接取元素
 '''
 class Solution:
     def twoSum(self, nums, target):
