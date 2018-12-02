@@ -38,7 +38,7 @@ class Solution:
 		:rtype: int
 		"""
 		slen = len(s)
-		ss = iter(range(slen))	#生成迭代器，以便于使用next()
+		ss = iter(range(slen))	#iter()生成迭代器，以便于使用next()
 		num = 0
 		for i in ss:
 			if s[i] == 'I':
