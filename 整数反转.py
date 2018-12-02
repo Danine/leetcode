@@ -10,7 +10,7 @@ class Solution:
     def reverse(self, x):
         if x < 0:
             s = str(-x)
-            y = s[::-1]
+            y = s[::-1]	#将str倒序输出
             z = -int(y)
         else:
             s = str(x)
