@@ -15,9 +15,11 @@
 思路：转成字符串，利用s[::-1]可将字符串反转，然后判断。对于x<0，永远不可能为回文数。
 '''
 class Solution:
-    def isPalindrome(self, x):
-        return str(x)[::-1] == str(x)
-		
+	def isPalindrome(self, x):
+		return str(x)[::-1] == str(x)
+
+t = Solution()
+print(t.isPalindrome(12321))
 '''
 进阶:
 你能不将整数转为字符串来解决这个问题吗？

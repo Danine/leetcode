@@ -8,10 +8,14 @@
 idea:set()是一个无序的不重复元素序列，类似于字典，不用遍历直接取元素
 '''
 class Solution:
-    def twoSum(self, nums, target):
-        k = len(nums)
-        s = set(nums)
-        for i in range(k):
-            l = target - nums[i]
-            if (l in s)and(nums.index(l) != i):
-                return [i,nums.index(l)]
+	def twoSum(self, nums, target):
+		k = len(nums)
+		s = set(nums)
+		for i in range(k):
+			l = target - nums[i]
+			if (l in s)and(nums.index(l) != i):
+				return [i,nums.index(l)]
+
+nums = [2, 7, 11, 15]; target = 18
+t = Solution()
+print(t.twoSum(nums,target))
