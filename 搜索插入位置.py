@@ -13,10 +13,11 @@ class Solution:
         :rtype: int
         """
         # 遍历nums，如果target小于等于nums，就插在这个地方
+        if target > nums[len(nums)-1]:
+            return len(nums)
         for i in range(len(nums)):
             if target <= nums[i]:
                 return i
-        return len(nums)
 
 nums = [1,3,5,6]; target = 7
 t = Solution()
