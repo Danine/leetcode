@@ -15,15 +15,22 @@ class Solution:
         if length == 1:
             return nums[0]
         maxc = nums[0]; sumc = 0; i = 0
-        for i in range(length):
+        # for i in range(length):#下标表示
+        #     if sumc > 0:
+        #         sumc += nums[i]
+        #     else:
+        #         sumc = nums[i]
+        #     if sumc > maxc:
+        #         maxc = sumc
+        # return maxc
+        for num in nums:#直接遍历元素
             if sumc > 0:
-                sumc = sumc + nums[i]
+                sumc += num
             else:
-                sumc = nums[i]
+                sumc = num
             if sumc > maxc:
                 maxc = sumc
         return maxc
-
-nums = [-2,-3]
+nums = [-2,1,-3,4,-1,2,1,-5,4]
 t = Solution()
 print(t.maxSubArray(nums))
