@@ -21,7 +21,11 @@ class Solution:
         digits = list(digits)               #转列表
         digits = [int(i) for i in digits]   #按位转回int
         # 一行版
+<<<<<<< HEAD
         # digits = [int(i) for i in list(str(int(''.join([str(i) for i in digits])) + 1))]
+=======
+        digits = [int(i) for i in list(str(int(''.join([str(i) for i in digits])) + 1))]
+>>>>>>> b930e31e8d42ae61eff4def30961cb58b955e38a
         return digits
 
 digits = [9,9,9,9]
