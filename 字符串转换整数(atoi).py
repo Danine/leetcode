@@ -40,5 +40,25 @@ class Solution:
         :type str: str
         :rtype: int
         """
+        import re   #正则表达式
         s = str.strip()
-        
+        if not s or s =='-' or s == '+':
+            return 0
+        if (s[0] == '+' and s[1].isdigit()) or s[0].isdigit():#.isdigit()判断是否是数字
+            digit = int(re.findall("\d+",s)[0]) #取第一段数字
+            if digit < 2**31 - 1:
+                return digit
+            else:
+                return 2**31 - 1
+        elif s[0] == '-' and s[1].isdigit():
+            digit = int(re.findall("\d+",s)[0])
+            if -digit >= (-2)**31:
+                return -digit
+            else:
+                return (-2)**31
+        else:
+            return 0
+
+str = '-91283472332'
+t = Solution()
+print(t.myAtoi(str))
