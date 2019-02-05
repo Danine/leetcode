@@ -15,4 +15,20 @@ class Solution:
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        
+        rt = []
+        length = len(nums)
+        #会超时
+        for i in range(length-1):
+            for j in range(i+1,length):
+                c = 0 - nums[i] - nums[j]
+                three = [nums[i],c,nums[j]]
+                three.sort()
+                temp = nums.copy()
+                temp.pop(j); temp.pop(i)
+                if c in temp and three not in rt:
+                    rt.append(three)
+        return rt
+
+nums = [3,0,-2,-1,1,2]
+t = Solution()
+print(t.threeSum(nums))
