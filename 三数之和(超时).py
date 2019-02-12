@@ -15,6 +15,7 @@ class Solution:
         :type nums: List[int]
         :rtype: List[List[int]]
         """
+        nums.sort()
         rt = []
         length = len(nums)
         #会超时
@@ -27,8 +28,10 @@ class Solution:
                 temp.pop(j); temp.pop(i)
                 if c in temp and three not in rt:
                     rt.append(three)
+            if nums[i] >= 0:
+                break
         return rt
 
-nums = [3,0,-2,-1,1,2]
+nums = [-1, 0, 1, 2, -1, -4]
 t = Solution()
 print(t.threeSum(nums))
