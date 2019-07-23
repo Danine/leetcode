@@ -11,6 +11,13 @@
   [3,1,2],
   [3,2,1]
 ]
+1234
+1243
+1324
+1342
+1423
+1432
+
 '''
 class Solution:
     def permute(self, nums):
